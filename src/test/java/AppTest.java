@@ -1,7 +1,7 @@
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
+import javax.swing.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
@@ -29,9 +29,8 @@ public class AppTest {
         driver.findElement(AppiumBy.xpath("//android.widget.EditText[@text=\"Password\"]")).sendKeys("abc@password");
         driver.findElement(AppiumBy.xpath("//android.view.ViewGroup[@content-desc=\"Sign In  \"]\n")).click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(200));
-
-
         System.out.println("All test executed");
+
 
     }
 }
